@@ -11,7 +11,7 @@ if (empty($modelClass)) {
             </div>
         </div>
         <div class="panel-body">
-            <?php echo $this->Form->create($modelClass);?>
+            <?php echo $this->Form->create($modelClass, array('type'=>'file'));?>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section">
@@ -60,6 +60,24 @@ if (empty($modelClass)) {
                                         
                                         'label' => false,
                                     ));
+                                ?>
+                            </label>
+                        </div>
+                    </div>
+
+
+                     <div class="col-md-12">
+                        <div class="section">
+                            <label class="field">                                
+                                <?php
+                                    
+                                    echo $this->Form->input('picture', array(
+                                        'class' => 'gui-input',
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'label' => false,
+                                    ));
+                                    
                                 ?>
                             </label>
                         </div>

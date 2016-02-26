@@ -4,7 +4,7 @@ if (empty($modelClass)) {
     $modelClass = Inflector::singularize($this->name);
 }
 ?> 
-<?php echo $this->Form->create($modelClass);?>
+
 <div class="allcp-form theme-primary">
     <div class="panel">
         <div class="panel-heading">
@@ -12,7 +12,8 @@ if (empty($modelClass)) {
             </div>
         </div>
         <div class="panel-body">
-            <?php echo $this->Form->create($modelClass);?>
+            <?php echo $this->Form->create($modelClass, array('type'=>'file'));?>
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section">
@@ -65,6 +66,37 @@ if (empty($modelClass)) {
                             </label>
                         </div>
                     </div>
+
+
+
+
+                     <div class="col-md-12">
+                        <div class="section">
+                            <label class="field">                                
+                                <?php
+                                    
+                                    echo $this->Form->input('picture', array(
+                                        'class' => 'gui-input',
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'label' => false,
+                                    ));
+                                ?>
+                            </label>
+                        </div>
+                    </div>
+
+
+
+                     <div class="col-md-12">
+                        <div class="section">
+                                <?php echo  $this->Html->image('uploads/'.$this->request->data['Car']['picture'], ['class'=>'img-responsive', 'width'=>400]) ?>
+                        </div>
+                    </div>
+
+
+
+
 
 
                     <div class="col-md-12">

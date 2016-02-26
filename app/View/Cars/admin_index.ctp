@@ -3,7 +3,7 @@ if (empty($modelClass)) {
     $modelClass = Inflector::singularize($this->name);
 }
 ?> 
-<h2 class="hidden-desktop">Generales</h2>
+<h2 class="hidden-desktop">Carros</h2>
 
 
 
@@ -21,6 +21,7 @@ if (empty($modelClass)) {
                         <thead>
                         <tr class="bg-light">
                             <th>id</th>
+                            <th>Imagen</th>
                             <th>Nombre</th>
                             <th>Categoria</th>
                             <th>Texto</th>
@@ -31,6 +32,9 @@ if (empty($modelClass)) {
                         <?php foreach ($carros as $item) { ?>
                             <tr>
                                 <td class=""><?php echo $item[$modelClass]['id'] ?></td>
+                                <td>
+<?php echo  $this->Html->image('uploads/'.$item[$modelClass]['picture'], ['class'=>'img-responsive', 'width'=>100]) ?>
+                                </td>
                                 <td class=""><?php echo $item[$modelClass]['name'] ?> </td>
                                 <td class=""><?php echo $item[$modelClass]['category'] ?> </td>
                                 <td class=""><?php echo $item[$modelClass]['text'] ?> </td>
