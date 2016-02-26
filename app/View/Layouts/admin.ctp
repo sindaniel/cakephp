@@ -30,19 +30,21 @@
     <!-- -------------- Sidebar  -------------- -->
     <?php echo $this->element('admin/navigation'); ?>
     <!-- -------------- Main Wrapper -------------- -->
-    <section id="content_wrapper">
-        <!-- -------------- Content -------------- -->
-        <section id="content" class="table-layout animated fadeIn">
-            <!-- -------------- Column Center -------------- -->
-            <div class="chute chute-center">
-                <!-- -------------- Products Status Table -------------- -->
-                <?php echo $this->Help->sessionFlash(); ?>
-                <?php echo $this->fetch('content'); ?>
-            </div>
-            <!-- -------------- /Column Center -------------- -->
+    <div class="col-md-9">
+        <section id="content_wrapper">
+            <!-- -------------- Content -------------- -->
+            <section id="content" class="table-layout animated fadeIn">
+                <!-- -------------- Column Center -------------- -->
+                <div class="chute chute-center">
+                    <!-- -------------- Products Status Table -------------- -->
+                    <?php echo $this->Help->sessionFlash(); ?>
+                    <?php echo $this->fetch('content'); ?>
+                </div>
+                <!-- -------------- /Column Center -------------- -->
+            </section>
+            <!-- -------------- /Content -------------- -->
         </section>
-        <!-- -------------- /Content -------------- -->
-    </section>
+    </div>
 </div>
     <?php
         echo $this->Html->script([

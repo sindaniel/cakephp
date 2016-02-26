@@ -34,14 +34,21 @@
                     <a class="accordion-toggle menu-open" href="<?php echo $this->Html->url(array('controller' => 'sections', 'action' => 'index')); ?>">
                         <span class="fa fa-dashboard"></span>
                         <span class="sidebar-title">Generales</span>
-                        <span class="caret"></span>
                     </a>
                     
                 </li>
 
-                <!-- -------------- Sidebar Progress Bars -------------- -->
-              
-               
+
+
+
+                 <li>
+
+                    <a class="accordion-toggle menu-open" href="<?php echo $this->Html->url(array('controller' => 'cars', 'action' => 'index')); ?>">
+                        <span class="fa fa-car"></span>
+                        <span class="sidebar-title">Carros</span>
+                    </a>
+                    
+                </li>
             </ul>
             <!-- -------------- /Sidebar Menu  -------------- -->
 
