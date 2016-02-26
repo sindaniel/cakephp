@@ -30,6 +30,12 @@
  */	
     Router::connect('/admin', array('controller' => 'users', 'action' => 'login', 'admin' => true));
 
+    // Router::connect('/viajes/:id-:name', array('controller' => 'pages', 'action' => 'viaje'), array('pass' => array('id', 'name')));
+
+
+
+    Router::connect('/ampliacion/:id-:name', array('controller' => 'pages', 'action' => 'ampliacion'), array('pass' => array('id', 'name')));
+
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
